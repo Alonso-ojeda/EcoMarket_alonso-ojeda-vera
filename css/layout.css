@@ -85,3 +85,87 @@
     gap: 2rem;
 }
 
+/* --- DISEÑO DE PAGINA DEL CATALOGO --- */
+.max-width-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* separa la barra lateral */
+.catalog-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Barra Lateral (Se queda fija) */
+.filters-sidebar {
+    background-color: #fafafa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid #eaeaea;
+    height: fit-content;
+}
+
+.filter-group {
+    margin-top: 1.5rem;
+}
+
+.filter-group label {
+    display: block;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.catalog-main {
+    flex-grow: 1;
+}
+
+/* Buscador */
+.search-bar-container {
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.search-input:focus {
+    border-color: var(--color-primary);
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/*para Tablet y Escritorio*/
+@media (min-width: 600px) {
+    .catalog-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 900px) {
+    .catalog-layout {
+        flex-direction: row; 
+    }
+    .filters-sidebar {
+        width: 250px;
+        position: sticky;
+        top: 90px;
+    }
+    .catalog-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

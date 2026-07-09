@@ -83,3 +83,104 @@
     background-color: var(--color-primary);
     color: var(--color-white);
 }
+
+/*TARJETAS DEL CATALOGO*/
+.product-item {
+    background: var(--color-white);
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-thumb {
+    background-color: #f4f4f4;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.product-details {
+    padding: 1rem;
+    position: relative;
+}
+
+.product-details h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+}
+
+.price {
+    font-weight: bold;
+    color: var(--color-text-dark);
+}
+
+/*Etiqueta de Disponibilidad*/
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.badge-stock {
+    background-color: #e8f8f0;
+    color: var(--color-primary-dark);
+}
+
+.badge-out {
+    background-color: #fde8e8;
+    color: #e74c3c;
+}
+
+/*TRUCO CSS INTERACTIVO: sin usar JS */
+.fav-label {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.fav-checkbox {
+    display: none; 
+}
+
+.fav-heart {
+    font-size: 1.2rem;
+    filter: grayscale(100%); 
+    opacity: 0.5;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.fav-checkbox:checked + .fav-heart {
+    filter: grayscale(0%); /* Se vuelve rojo real */
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.page-link, .page-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.page-link.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.page-link:hover:not(.active), .page-btn:hover {
+    background-color: #f5f5f5;
+}

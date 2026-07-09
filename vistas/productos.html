@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo EcoMarket | Productos Sustentables</title>
+    <!-- Ruta relativa corregida hacia la carpeta raíz css/ -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animaciones.css">
+</head>
+<body>
+
+    <!-- Encabezado Copiado del Home (Mantener consistencia) -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">EcoMarket</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="productos.html" class="active">Productos</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="action-btn">🔍</button>
+                <button class="action-btn">🛒</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal del Catálogo -->
+    <div class="catalog-layout max-width-container">
+        
+        <!-- Barra Lateral de Filtros (Sticky) -->
+        <aside class="filters-sidebar">
+            <h3>Filtrar por</h3>
+            
+            <div class="filter-group">
+                <h4>Categorías</h4>
+                <label><input type="checkbox"> Hogar</label>
+                <label><input type="checkbox"> Moda</label>
+                <label><input type="checkbox"> Cuidado Personal</label>
+                <label><input type="checkbox"> Alimentos</label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Disponibilidad</h4>
+                <label><input type="radio" name="stock"> En Stock</label>
+                <label><input type="radio" name="stock"> Agotado</label>
+            </div>
+        </aside>
+
+        <!-- Área de Contenido Principal -->
+        <main class="catalog-main">
+            <!-- Barra Superior de Búsqueda -->
+            <div class="search-bar-container">
+                <input type="text" class="search-input" placeholder="Buscar productos ecológicos...">
+            </div>
+
+            <div class="catalog-grid">
+                
+                <!-- Producto 1 -->
+                <article class="product-item">
+                    <div class="product-thumb">🌱</div>
+                    <div class="product-details">
+                        <span class="badge badge-stock">En Stock</span>
+                        <h3>Bolsa de Tela</h3>
+                        <p class="price">$4.990</p>
+                        <label class="fav-label">
+                            <input type="checkbox" class="fav-checkbox">
+                            <span class="fav-heart">❤️</span>
+                        </label>
+                    </div>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="product-item">
+                    <div class="product-thumb">🥣</div>
+                    <div class="product-details">
+                        <span class="badge badge-out">Agotado</span>
+                        <h3>Bowl de Coco</h3>
+                        <p class="price">$7.500</p>
+                        <label class="fav-label">
+                            <input type="checkbox" class="fav-checkbox">
+                            <span class="fav-heart">❤️</span>
+                        </label>
+                    </div>
+                </article>
+
+                <script>
+                </script>
+
+            </div>
+
+            <!-- Paginación Visual -->
+            <div class="pagination">
+                <a href="#" class="page-btn">&laquo; Anterior</a>
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-btn">Siguiente &raquo;</a>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
