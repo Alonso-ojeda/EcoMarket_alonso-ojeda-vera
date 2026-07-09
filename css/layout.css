@@ -64,3 +64,24 @@
     margin-bottom: 2rem;
     color: #555;
 }
+
+/* cuadricula de productos */
+.featured-procts{
+    max-width: 1200px;
+    margin: 4rem;
+    padding: 0 1.5rem;
+}
+
+.section-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    color: var(--color-text-dark);
+}
+
+.products-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
