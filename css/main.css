@@ -1,0 +1,34 @@
+/* variables con los colores */
+:root{
+    --color-primary: #2ecc71;
+    --color-primary-dark: #27ae60;
+    --color-bg-light: #f5f5dc; /* Tono Tierra/Beige */
+    --color-text-dark: #2c3e50;
+    --color-white: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* reset tecnico*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--font-main);
+    background-color: var(--color-white);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
