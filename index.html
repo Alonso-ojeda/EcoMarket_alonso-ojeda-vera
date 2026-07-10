@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ecoMarket</title>
+    <!-- libreria de iconos vectoriales para cumplir con el drive -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="css/animaciones.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -13,20 +15,26 @@
 <body>
     <header class="main-header">
         <div class="header-container">
-            <a href="index.html"class="logo"> ecoMarket</a>
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf logo-icon"></i> ecoMarket
+            </a>
 
-            <nav class="main=nav">
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="index.html" class="logo"ecoMarket></a></li>
-                    <li><a href="vistas/productos.html">productos</a></li>
-                    <li><a href="vistas/sobre-nosotros.html">nosotros</a></li>
-                    <li><a href="vistas/contacto.html">contacto</a></li>
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="vistas/productos.html">Productos</a></li>
+                    <li><a href="vistas/sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="vistas/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <button class="action-btn" aria-label="buscar">🔍</button>
-                <button class="action-btn" aria-label="carrito">🛒</button>
+                <button class="action-btn" aria-label="buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="action-btn cart-btn" aria-label="carrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">2</span>
+                </button>
+                <button class="action-btn" aria-label="modo oscuro"><i class="fa-regular fa-moon"></i></button>
             </div>
         </div>
     </header>
@@ -35,68 +43,140 @@
         <!-- baner principal -->
         <section class="hero-section">
             <div class="hero-content">
-                <h1>Compra resposable, vive sostenible.</h1>
+                <h1>Compra responsable, vive sostenible.</h1>
                 <p>Descubre nuestra seleccion exclusiva de procesos 100% ecologicos y reutilizables.</p>
                 <a href="vistas/productos.html" class="btn btn-primary">explorar productos</a>
             </div>
         </section>
-        <!-- productos  detacados  -->
-        <section class="featured-procucts">
+
+        <!-- productos detacados -->
+        <section class="featured-products">
             <h2 class="section-title">Productos Destacados</h2>
 
             <div class="products-grid">
                 <!-- tarjeta 1 -->
-                <article class="products-card">
-                    <div class="product-image-placeholder">🍃</div>
-                    <div class="product-info">
-                        <h3>Botella reutilizable.</h3>
-                        <p>Acero inoxidable de alta calidad, mentiene tus bebidas frias por 24 horas.</p>
-                        <a href="vistas/productos.html" class="btn-card">Ver mas.</a>
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-green">BIODEGRADABLE</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
+                        </label>
+                        <div class="img-placeholder-content">🪥</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Set Cepillos de Bambú</h3>
+                        <p class="desc">Acero inoxidable de alta calidad, mantiene tus bebidas frías por 24 horas.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$12.00</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                 </article>
+
                 <!-- tarjeta 2 -->
-                <article class="products-card">
-                    <div class="product-image-placeholder">🧽</div>
-                    <div class="product-info">
-                        <h3>Esponja vegetal luffa</h3>
-                        <p>Alternativa 100% biodegradable y compostable para la limpieza del hogar.</p>
-                        <a href="vistas/productos.html" class="btn-card">Ver mas.</a>
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-blue">LIBRE DE BPA</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
+                        </label>
+                        <div class="img-placeholder-content">🧽</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Esponja Vegetal Luffa</h3>
+                        <p class="desc">Alternativa 100% biodegradable y compostable para la limpieza del hogar.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$6.50</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                 </article>
+
                 <!-- tarjeta 3 -->
-                <article class="products-card">
-                    <div class="product-image-placeholder">🪥</div>
-                    <div class="product-info">
-                        <h3>Cepillo de Bambu.</h3>
-                        <p>Cerdas de nailon libre de BPA con mango de bambu antibacterniano.</p>
-                        <a href="vistas/productos.html" class="btn-card">Ver mas.</a>
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-orange">ORGÁNICO</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
+                        </label>
+                        <div class="img-placeholder-content">🪥</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Cepillo de Bambú</h3>
+                        <p class="desc">Cerdas de nailon libre de BPA con mango de bambú antibacteriano.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$8.00</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                 </article>
+
                 <!-- tarjeta 4 -->
-                <article class="products-card">
-                    <div class="product-image-placeholder">🛍️</div>
-                    <div class="product-info">
-                        <h3>Bolsa de Algodon</h3>
-                        <p>Pack de 3 bolsas reutilizable perfectas para tus compras a granel.</p>
-                        <a href="vistas/productos.html" class="btn-card">Ver mas</a>
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-purple">SIN PLÁSTICO</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
+                        </label>
+                        <div class="img-placeholder-content">🛍️</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Bolsa de Algodón</h3>
+                        <p class="desc">Pack de 3 bolsas reutilizables perfectas para tus compras a granel.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$14.00</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                 </article>
+
                 <!-- tajeta 5 -->
-                <article class="products-card">
-                    <div class="product-image-placeholder">🐝</div>
-                    <div class="product-info">
-                        <h3>Envoltorios de Cera.</h3>
-                        <p>Conserva tus alimentos de manera natural sustituyendo el plastico film</p>
-                        <a href="vistas/productos.html" class="btn-card">Ver mas.</a>
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-green">NATURAL</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
+                        </label>
+                        <div class="img-placeholder-content">🐝</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Envoltorios de Cera</h3>
+                        <p class="desc">Conserva tus alimentos de manera natural sustituyendo el plástico film.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$18.50</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                 </article>
+
                 <!-- tarjeta 6 -->
-                <article class="products-card">
-                    <div class="product-image-placeholder">☕</div>
-                    <div class="product-info">
-                        <h3>Vaso de Cafe Eco.</h3>
-                        <p>Fabricado con fibra de cascarilla de aroz, ideal para tus mañanas activas.</p>
-                        <a href="vistas/productos.html" class="btn-card">Ver mas.</a>
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-blue">REUTILIZABLE</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
+                        </label>
+                        <div class="img-placeholder-content">☕</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Vaso de Café Eco</h3>
+                        <p class="desc">Fabricado con fibra de cascarilla de arroz, ideal para tus mañanas activas.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$15.00</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                 </article>
             </div>

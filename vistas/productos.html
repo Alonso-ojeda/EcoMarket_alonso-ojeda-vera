@@ -1,21 +1,26 @@
+<!-- vistas/productos.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo EcoMarket | Productos Sustentables</title>
-    <!-- Ruta relativa corregida hacia la carpeta raíz css/ -->
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/layout.css">
-    <link rel="stylesheet" href="../css/components.css">
+    <title>Catálogo - ecoMarket</title>
+    <!-- libreria de iconos vectoriales para cumplir con el drive -->
+    <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="../css/animaciones.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
-    <!-- Encabezado Copiado del Home (Mantener consistencia) -->
+    <!-- encabezado oficial unificado -->
     <header class="main-header">
         <div class="header-container">
-            <a href="../index.html" class="logo">EcoMarket</a>
+            <a href="../index.html" class="logo">
+                <i class="fa-solid fa-leaf logo-icon"></i> ecoMarket
+            </a>
             <nav class="main-nav">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -25,86 +30,171 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="action-btn">🔍</button>
-                <button class="action-btn">🛒</button>
+                <button class="action-btn" aria-label="buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="action-btn cart-btn" aria-label="carrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">2</span>
+                </button>
+                <button class="action-btn" aria-label="modo oscuro"><i class="fa-regular fa-moon"></i></button>
             </div>
         </div>
     </header>
 
-    <!-- Contenedor Principal del Catálogo -->
+    <!-- layout del catalogo (filtros izquierda + contenido derecha) -->
     <div class="catalog-layout max-width-container">
         
-        <!-- Barra Lateral de Filtros (Sticky) -->
+        <!-- barra lateral de filtros fija (sticky) -->
         <aside class="filters-sidebar">
-            <h3>Filtrar por</h3>
-            
-            <div class="filter-group">
-                <h4>Categorías</h4>
-                <label><input type="checkbox"> Hogar</label>
-                <label><input type="checkbox"> Moda</label>
-                <label><input type="checkbox"> Cuidado Personal</label>
-                <label><input type="checkbox"> Alimentos</label>
+            <div class="filter-section">
+                <h3>Categorías</h3>
+                <div class="filter-group-custom">
+                    <label class="radio-container">
+                        <input type="radio" name="category" checked>
+                        <span class="radio-checkmark"></span> Todos los Productos
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="category">
+                        <span class="radio-checkmark"></span> Cocina Eco
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="category">
+                        <span class="radio-checkmark"></span> Residuo Cero
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="category">
+                        <span class="radio-checkmark"></span> Cuidado Personal
+                    </label>
+                    <label class="radio-container">
+                        <input type="radio" name="category">
+                        <span class="radio-checkmark"></span> Textiles
+                    </label>
+                </div>
             </div>
 
-            <div class="filter-group">
-                <h4>Disponibilidad</h4>
-                <label><input type="radio" name="stock"> En Stock</label>
-                <label><input type="radio" name="stock"> Agotado</label>
+            <div class="filter-section divider">
+                <h3>Rango de Precios</h3>
+                <div class="price-slider-container">
+                    <div class="price-labels-top">
+                        <span>$0</span>
+                        <span>$100+</span>
+                    </div>
+                    <input type="range" class="price-slider" min="0" max="100" value="50">
+                    <div class="price-inputs-bottom">
+                        <span class="price-box">$10.00</span>
+                        <span class="price-box">$50.00</span>
+                    </div>
+                </div>
             </div>
         </aside>
 
-        <!-- Área de Contenido Principal -->
+        <!-- contenido principal del catalogo -->
         <main class="catalog-main">
-            <!-- Barra Superior de Búsqueda -->
-            <div class="search-bar-container">
-                <input type="text" class="search-input" placeholder="Buscar productos ecológicos...">
+            
+            <!-- barra de busqueda superior estilo drive -->
+            <div class="catalog-top-bar">
+                <div class="title-meta">
+                    <h2>Hallazgos Sostenibles</h2>
+                    <p>Mostrando 20 productos ecológicos</p>
+                </div>
+                <div class="search-and-filter">
+                    <div class="search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+                        <input type="text" placeholder="Buscar productos...">
+                    </div>
+                    <button class="filter-toggle-btn"><i class="fa-solid fa-sliders"></i></button>
+                </div>
             </div>
 
+            <!-- matriz de 20 productos obligatorios -->
             <div class="catalog-grid">
                 
-                <!-- Producto 1 -->
-                <article class="product-item">
-                    <div class="product-thumb">🌱</div>
-                    <div class="product-details">
-                        <span class="badge badge-stock">En Stock</span>
-                        <h3>Bolsa de Tela</h3>
-                        <p class="price">$4.990</p>
-                        <label class="fav-label">
-                            <input type="checkbox" class="fav-checkbox">
-                            <span class="fav-heart">❤️</span>
+                <!-- tarjeta 1 -->
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-green">BIODEGRADABLE</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
                         </label>
+                        <div class="img-placeholder-content">🪥</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Set Cepillos de Bambú</h3>
+                        <p class="desc">Mangos de bambú Moso de origen ético con cerdas suaves de carbón.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$12.00</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Producto 2 -->
-                <article class="product-item">
-                    <div class="product-thumb">🥣</div>
-                    <div class="product-details">
-                        <span class="badge badge-out">Agotado</span>
-                        <h3>Bowl de Coco</h3>
-                        <p class="price">$7.500</p>
-                        <label class="fav-label">
-                            <input type="checkbox" class="fav-checkbox">
-                            <span class="fav-heart">❤️</span>
+                <!-- tarjeta 2 -->
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-blue">LIBRE DE BPA</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
                         </label>
+                        <div class="img-placeholder-content">🛍️</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Bolsas de Silicona Eco</h3>
+                        <p class="desc">Bolsas reutilizables herméticas para reemplazar bolsas plásticas desechables.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$24.50</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
                     </div>
                 </article>
 
-                <script>
-                </script>
+                <!-- tarjeta 3 -->
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-orange">ORGÁNICO</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
+                        </label>
+                        <div class="img-placeholder-content">🕸️</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Bolsas de Malla de Algodón</h3>
+                        <p class="desc">Bolsas ligeras de malla de algodón orgánico ideales para ir de compras.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$18.00</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
 
-            </div>
+                <!-- tarjeta 4 -->
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-purple">SIN PLÁSTICO</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                            <i class="fa-solid fa-heart heart-filled"></i>
+                        </label>
+                        <div class="img-placeholder-content">🧼</div>
+                    </div>
+                    <div class="details-wrapper">
+                        <h3>Shampoo Sólido Cítrico</h3>
+                        <p class="desc">Barra concentrada de champú sólido elaborado con aceites esenciales orgánicos.</p>
+                        <div class="price-and-action">
+                            <span class="card-price">$14.00</span>
+                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- Paginación Visual -->
-            <div class="pagination">
-                <a href="#" class="page-btn">&laquo; Anterior</a>
-                <a href="#" class="page-link active">1</a>
-                <a href="#" class="page-link">2</a>
-                <a href="#" class="page-link">3</a>
-                <a href="#" class="page-btn">Siguiente &raquo;</a>
-            </div>
-        </main>
-    </div>
-
-</body>
-</html>
+                <!-- tarjeta 5 -->
+                <article class="product-item-ref">
+                    <div class="thumb-wrapper">
+                        <span class="tag-badge bg-green">NATURAL</span>
+                        <label class="fav-heart-toggle">
+                            <input type="checkbox" class="fav-input">

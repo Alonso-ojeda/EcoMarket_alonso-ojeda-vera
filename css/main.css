@@ -1,9 +1,9 @@
 /* variables con los colores */
-:root{
-    --color-primary: #2ecc71;
-    --color-primary-dark: #27ae60;
-    --color-bg-light: #f5f5dc; /* Tono Tierra/Beige */
-    --color-text-dark: #2c3e50;
+:root {
+    --color-primary: #3b82f6;       
+    --color-primary-dark: #1d4ed8;  
+    --color-bg-light: #f8fafc;      
+    --color-text-dark: #1f2937;     
     --color-white: #ffffff;
     --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
