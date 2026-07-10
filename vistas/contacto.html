@@ -1,0 +1,101 @@
+<!-- vistas/contacto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - ecoMarket</title>
+    <!-- libreria oficial de iconos para cumplir con el drive -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    <link rel="stylesheet" href="../css/animaciones.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- encabezado oficial unificado con rutas corregidas -->
+    <header class="main-header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">
+                <i class="fa-solid fa-leaf logo-icon"></i> ecoMarket
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="sobre-nosotros.html">Nosotros</a></li>
+                    <li><a href="contacto.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="action-btn" aria-label="buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="action-btn cart-btn" aria-label="carrito">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge">2</span>
+                </button>
+                <button class="action-btn" aria-label="modo oscuro"><i class="fa-regular fa-moon"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- cuerpo de contacto responsivo -->
+    <main class="contact-layout max-width-container">
+        
+        <!-- formulario inteligente -->
+        <section class="contact-form-container">
+            <h2>Ponte en Contacto</h2>
+            <p>Escríbenos y nuestro equipo te responderá en menos de 24 horas.</p>
+            
+            <form class="smart-form">
+                <div class="input-group">
+                    <label for="name">Nombre Completo</label>
+                    <input type="text" id="name" required placeholder="Juan Pérez">
+                    <span class="validation-message">Este campo es obligatorio</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Dirección de Correo</label>
+                    <input type="email" id="email" required placeholder="hola@tudominio.com">
+                    <span class="validation-message">Ingresa un correo electrónico válido</span>
+                </div>
+
+                <div class="input-group">
+                    <label for="message">Tu Mensaje</label>
+                    <textarea id="message" rows="5" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <span class="validation-message">Por favor, escribe un mensaje corto</span>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Mensaje</button>
+            </form>
+        </section>
+
+        <!-- informacion lateral, mapa y redes -->
+        <aside class="contact-info-container">
+            <div class="info-box">
+                <h3>Nuestra Ubicación</h3>
+                <p><i class="fa-solid fa-location-dot info-icon"></i> Calle Eco 123, Eco Ciudad</p>
+                <p><i class="fa-solid fa-phone info-icon"></i> +1 (555) 019-2834</p>
+            </div>
+
+            <!-- requisito: mapa de ubicacion con imagen estatica estilizada -->
+            <div class="static-map-placeholder">
+                <i class="fa-regular fa-map map-icon-bg"></i>
+                <span>Mapa de Ubicación Estilizado</span>
+            </div>
+
+            <!-- requisito: redes sociales con animacion al hacer hover -->
+            <div class="social-channels">
+                <h3>Síguenos</h3>
+                <div class="social-icons-grid">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+</body>
+</html>

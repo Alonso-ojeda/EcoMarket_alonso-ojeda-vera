@@ -1,0 +1,59 @@
+/* animaciones y transiciones de la plataforma */
+
+/* efecto de levantamiento suave para las tarjetas de producto */
+.product-item-ref {
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s ease;
+}
+
+.product-item-ref:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(59, 130, 246, 0.15); /* sombra sutil con el azul de la marca */
+}
+
+/* animacion elastica al pasar el mouse por los testimonios */
+.testimonial-card {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, background-color 0.3s;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    background-color: #fbfbfb;
+}
+
+/* animacion de escala fluida para los iconos de redes sociales */
+.social-link {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.25); /* crece un 25% de forma elastica */
+}
+
+/* efecto de escala para el boton de añadir al carrito */
+.add-to-cart-btn {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    transform: scale(1.15);
+}
+
+/* efecto hover para los botones principales */
+.btn-primary {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+/* animacion de transicion para los enlaces del menu superior */
+.main-nav a {
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block; /* necesario para que el transform funcione */
+}
+
+.main-nav a:hover {
+    transform: translateY(-1px);
+}
