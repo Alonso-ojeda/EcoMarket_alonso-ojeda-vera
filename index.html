@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ecoMarket</title>
-    <!-- libreria de iconos vectoriales para cumplir con el drive -->
-    <link rel="stylesheet" href="https://cloudflare.com">
+    <title>ecoMarket - Inicio</title>
     <link rel="stylesheet" href="css/animaciones.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -13,10 +11,12 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    
+    <!-- encabezado oficial unificado -->
     <header class="main-header">
         <div class="header-container">
-            <a href="index.html" class="logo">
-                <i class="fa-solid fa-leaf logo-icon"></i> ecoMarket
+            <a href="index.html" class="logo"><svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo-icon"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 3.5 1 9.8a7 7 0 0 1-9 8.2Zm0 0v-5"/></svg>
+                ecoMarket
             </a>
 
             <nav class="main-nav">
@@ -27,50 +27,62 @@
                     <li><a href="vistas/contacto.html">Contacto</a></li>
                 </ul>
             </nav>
+            <div class="header-botones"></div>
 
             <div class="header-actions">
-                <button class="action-btn" aria-label="buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="action-btn" aria-label="buscar"><i data-lucide="search"></i></button>
                 <button class="action-btn cart-btn" aria-label="carrito">
-                    <i class="fa-solid fa-bag-shopping"></i>
-                    <span class="cart-badge">2</span>
+                    <i data-lucide="shopping-bag"></i>
+                    <span class="cart-badge"></span>
                 </button>
-                <button class="action-btn" aria-label="modo oscuro"><i class="fa-regular fa-moon"></i></button>
+                <button class="action-btn" aria-label="modo oscuro"><i data-lucide="moon"></i></button>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- baner principal -->
+        <!-- baner principal con fondo de hojas de la foto -->
         <section class="hero-section">
-            <div class="hero-content">
-                <h1>Compra responsable, vive sostenible.</h1>
-                <p>Descubre nuestra seleccion exclusiva de procesos 100% ecologicos y reutilizables.</p>
-                <a href="vistas/productos.html" class="btn btn-primary">explorar productos</a>
+                </div>
             </div>
         </section>
 
-        <!-- productos detacados -->
+        <!-- seccion de categorias rapidas de la imagen -->
+        <section class="quick-categories max-width-container">
+            <button class="cat-pill active">Todo</button>
+            <button class="cat-pill">Bambú</button>
+            <button class="cat-pill">Textiles</button>
+            <button class="cat-pill">Cocina</button>
+            <button class="cat-pill">Residuo Cero</button>
+        </section>
+
+        <!-- productos destacados clonados del drive -->
         <section class="featured-products">
-            <h2 class="section-title">Productos Destacados</h2>
+            <div class="section-header-flex">
+                <div class="title-meta">
+                    <h2>Hallazgos Destacados</h2>
+                    <p>Esenciales ecológicos seleccionados para ti.</p>
+                </div>
+                <a href="vistas/productos.html" class="view-all-link">Ver todos los productos <i data-lucide="arrow-right"></i></a>
+            </div>
 
             <div class="products-grid">
                 <!-- tarjeta 1 -->
                 <article class="product-item-ref">
                     <div class="thumb-wrapper">
-                        <span class="tag-badge bg-green">BIODEGRADABLE</span>
+                        <span class="tag-badge bg-orange">Cuidado Personal Sin Plástico</span>
                         <label class="fav-heart-toggle">
                             <input type="checkbox" class="fav-input">
-                            <i class="fa-regular fa-heart heart-empty"></i>
-                            <i class="fa-solid fa-heart heart-filled"></i>
+                            <i data-lucide="heart" class="heart-empty"></i>
                         </label>
-                        <div class="img-placeholder-content">🪥</div>
+                        <img src="imagen/productos/cepillos.png" alt="Cepillo de Bambú" class="product-real-img">
                     </div>
                     <div class="details-wrapper">
                         <h3>Set Cepillos de Bambú</h3>
-                        <p class="desc">Acero inoxidable de alta calidad, mantiene tus bebidas frías por 24 horas.</p>
+                        <p class="desc">Mangos de bambú Moso de origen ético con cerdas de carbón. 100% compostables.</p>
                         <div class="price-and-action">
                             <span class="card-price">$12.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="add-to-cart-btn-text"><i data-lucide="shopping-cart"></i> Añadir al Carrito</button>
                         </div>
                     </div>
                 </article>
@@ -78,20 +90,19 @@
                 <!-- tarjeta 2 -->
                 <article class="product-item-ref">
                     <div class="thumb-wrapper">
-                        <span class="tag-badge bg-blue">LIBRE DE BPA</span>
+                        <span class="tag-badge bg-green">100% Orgánico y Biodegradable</span>
                         <label class="fav-heart-toggle">
                             <input type="checkbox" class="fav-input">
-                            <i class="fa-regular fa-heart heart-empty"></i>
-                            <i class="fa-solid fa-heart heart-filled"></i>
+                            <i data-lucide="heart" class="heart-empty"></i>
                         </label>
-                        <div class="img-placeholder-content">🧽</div>
+                        <img src="imagen/productos/esponja.png" alt="Esponja de Luffa Natural" class="product-real-img">
                     </div>
                     <div class="details-wrapper">
-                        <h3>Esponja Vegetal Luffa</h3>
-                        <p class="desc">Alternativa 100% biodegradable y compostable para la limpieza del hogar.</p>
+                        <h3>Esponja de Luffa Natural</h3>
+                        <p class="desc">Alternativa vegetal a las esponjas plásticas, hecha de calabaza de lufa deshidratada para lavar platos o el cuerpo.</p>
                         <div class="price-and-action">
-                            <span class="card-price">$6.50</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                            <span class="card-price">$4.00</span>
+                            <button class="add-to-cart-btn-text"><i data-lucide="shopping-cart"></i> Añadir al Carrito</button>
                         </div>
                     </div>
                 </article>
@@ -99,20 +110,19 @@
                 <!-- tarjeta 3 -->
                 <article class="product-item-ref">
                     <div class="thumb-wrapper">
-                        <span class="tag-badge bg-orange">ORGÁNICO</span>
+                        <span class="tag-badge bg-blue">Cuidado Personal Sin Plástico</span>
                         <label class="fav-heart-toggle">
                             <input type="checkbox" class="fav-input">
-                            <i class="fa-regular fa-heart heart-empty"></i>
-                            <i class="fa-solid fa-heart heart-filled"></i>
+                            <i data-lucide="heart" class="heart-empty"></i>
                         </label>
-                        <div class="img-placeholder-content">🪥</div>
+                        <img src="imagen/productos/Champú y Acondicionador Sólido.png" alt="Botella de Vidrio" class="product-real-img">
                     </div>
                     <div class="details-wrapper">
-                        <h3>Cepillo de Bambú</h3>
-                        <p class="desc">Cerdas de nailon libre de BPA con mango de bambú antibacteriano.</p>
+                        <h3>Champú y Acondicionador Sólido</h3>
+                        <p class="desc">Pastillas concentradas con ingredientes naturales, libres de empaques plásticos, sulfatos y parabenos.</p>
                         <div class="price-and-action">
-                            <span class="card-price">$8.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                            <span class="card-price">$15.00</span>
+                            <button class="add-to-cart-btn-text"><i data-lucide="shopping-cart"></i> Añadir al Carrito</button>
                         </div>
                     </div>
                 </article>
@@ -120,41 +130,40 @@
                 <!-- tarjeta 4 -->
                 <article class="product-item-ref">
                     <div class="thumb-wrapper">
-                        <span class="tag-badge bg-purple">SIN PLÁSTICO</span>
+                        <span class="tag-badge bg-green">Cocina Libre de BPA y Reutilizable</span>
                         <label class="fav-heart-toggle">
                             <input type="checkbox" class="fav-input">
-                            <i class="fa-regular fa-heart heart-empty"></i>
-                            <i class="fa-solid fa-heart heart-filled"></i>
+                            <i data-lucide="heart" class="heart-empty"></i>
                         </label>
-                        <div class="img-placeholder-content">🛍️</div>
+                        <!-- imagen real de envoltorios de cera -->
+                        <img src="imagen/productos/Bolsas Reutilizables de Silicona.png" alt="Envoltorios de Cera" class="product-real-img">
                     </div>
                     <div class="details-wrapper">
-                        <h3>Bolsa de Algodón</h3>
-                        <p class="desc">Pack de 3 bolsas reutilizables perfectas para tus compras a granel.</p>
+                        <h3>Bolsas Reutilizables de Silicona</h3>
+                        <p class="desc">Bolsas herméticas de silicona de grado alimenticio para almacenar y congelar comida, reemplazando las de plástico de un solo uso.</p>
                         <div class="price-and-action">
-                            <span class="card-price">$14.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                            <span class="card-price">$18.00</span>
+                            <button class="add-to-cart-btn-text"><i data-lucide="shopping-cart"></i> Añadir al Carrito</button>
                         </div>
                     </div>
                 </article>
 
-                <!-- tajeta 5 -->
+                <!-- tarjeta 5 -->
                 <article class="product-item-ref">
                     <div class="thumb-wrapper">
-                        <span class="tag-badge bg-green">NATURAL</span>
+                        <span class="tag-badge bg-green">Cocina Libre de BPA y Reutilizable</span>
                         <label class="fav-heart-toggle">
                             <input type="checkbox" class="fav-input">
-                            <i class="fa-regular fa-heart heart-empty"></i>
-                            <i class="fa-solid fa-heart heart-filled"></i>
+                            <i data-lucide="heart" class="heart-empty"></i>
                         </label>
-                        <div class="img-placeholder-content">🐝</div>
+                        <img src="imagen/productos/Envolturas de Cera de Abeja.png" alt="Shampoo Sólido" class="product-real-img">
                     </div>
                     <div class="details-wrapper">
-                        <h3>Envoltorios de Cera</h3>
-                        <p class="desc">Conserva tus alimentos de manera natural sustituyendo el plástico film.</p>
+                        <h3>Envolturas de Cera de Abeja</h3>
+                        <p class="desc">Telas de algodón impregnadas con cera de abeja y resina para cubrir alimentos, sustituyendo el papel film transparente.</p>
                         <div class="price-and-action">
-                            <span class="card-price">$18.50</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                            <span class="card-price">$14.00</span>
+                            <button class="add-to-cart-btn-text"><i data-lucide="shopping-cart"></i> Añadir al Carrito</button>
                         </div>
                     </div>
                 </article>
@@ -162,25 +171,19 @@
                 <!-- tarjeta 6 -->
                 <article class="product-item-ref">
                     <div class="thumb-wrapper">
-                        <span class="tag-badge bg-blue">REUTILIZABLE</span>
+                        <span class="tag-badge bg-green">Cocina Libre de BPA y Reutilizable</span>
                         <label class="fav-heart-toggle">
                             <input type="checkbox" class="fav-input">
-                            <i class="fa-regular fa-heart heart-empty"></i>
-                            <i class="fa-solid fa-heart heart-filled"></i>
+                            <i data-lucide="heart" class="heart-empty"></i>
                         </label>
-                        <div class="img-placeholder-content">☕</div>
+                        <img src="imagen/productos/Termo de Acero Inoxidable.png" alt="Shampoo Sólido" class="product-real-img">
                     </div>
                     <div class="details-wrapper">
-                        <h3>Vaso de Café Eco</h3>
-                        <p class="desc">Fabricado con fibra de cascarilla de arroz, ideal para tus mañanas activas.</p>
+                        <h3>Termo de Acero Inoxidable</h3>
+                        <p class="desc">Botella con aislamiento al vacío que mantiene bebidas frías o calientes, eliminando el uso de botellas plásticas desechables.</p>
                         <div class="price-and-action">
-                            <span class="card-price">$15.00</span>
-                            <button class="add-to-cart-btn"><i class="fa-solid fa-plus"></i></button>
+                            <span class="card-price">$22.00</span>
+                            <button class="add-to-cart-btn-text"><i data-lucide="shopping-cart"></i> Añadir al Carrito</button>
                         </div>
                     </div>
                 </article>
-            </div>
-        </section>
-    </main>
-</body>
-</html>

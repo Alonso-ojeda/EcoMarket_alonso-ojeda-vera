@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - ecoMarket</title>
-    <!-- libreria oficial de iconos para cumplir con el drive -->
-    <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="../css/animaciones.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="stylesheet" href="../css/layout.css">
@@ -15,11 +13,11 @@
 </head>
 <body>
 
-    <!-- encabezado oficial unificado con rutas corregidas -->
+    <!-- encabezado oficial unificado con lucide icons -->
     <header class="main-header">
         <div class="header-container">
             <a href="../index.html" class="logo">
-                <i class="fa-solid fa-leaf logo-icon"></i> ecoMarket
+                <i data-lucide="leaf" class="logo-icon"></i> ecoMarket
             </a>
             <nav class="main-nav">
                 <ul>
@@ -30,12 +28,12 @@
                 </ul>
             </nav>
             <div class="header-actions">
-                <button class="action-btn" aria-label="buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="action-btn" aria-label="buscar"><i data-lucide="search"></i></button>
                 <button class="action-btn cart-btn" aria-label="carrito">
-                    <i class="fa-solid fa-bag-shopping"></i>
+                    <i data-lucide="shopping-bag"></i>
                     <span class="cart-badge">2</span>
                 </button>
-                <button class="action-btn" aria-label="modo oscuro"><i class="fa-regular fa-moon"></i></button>
+                <button class="action-btn" aria-label="modo oscuro"><i data-lucide="moon"></i></button>
             </div>
         </div>
     </header>
@@ -71,31 +69,52 @@
             </form>
         </section>
 
-        <!-- informacion lateral, mapa y redes -->
+        <!-- informacion lateral, mapa y redes sociales como la referencia -->
         <aside class="contact-info-container">
-            <div class="info-box">
-                <h3>Nuestra Ubicación</h3>
-                <p><i class="fa-solid fa-location-dot info-icon"></i> Calle Eco 123, Eco Ciudad</p>
-                <p><i class="fa-solid fa-phone info-icon"></i> +1 (555) 019-2834</p>
+            <div class="info-box-title">
+                <p><i data-lucide="map-pin" class="info-icon"></i> NUESTRA SEDE</p>
             </div>
 
             <!-- requisito: mapa de ubicacion con imagen estatica estilizada -->
             <div class="static-map-placeholder">
-                <i class="fa-regular fa-map map-icon-bg"></i>
-                <span>Mapa de Ubicación Estilizado</span>
+                <i data-lucide="map" class="map-icon-bg"></i>
+                <div class="map-text-overlay">
+                    <h4>123 Eco Way, Green City</h4>
+                    <p>Abierto de Lun-Vie, 9am - 5pm</p>
+                </div>
             </div>
 
-            <!-- requisito: redes sociales con animacion al hacer hover -->
+            <!-- tarjetas de contacto inferiores de la imagen -->
+            <div class="contact-cards-grid">
+                <div class="mini-info-card">
+                    <i data-lucide="mail"></i>
+                    <h4>Escríbenos</h4>
+                    <p>soporte@ecomarket.com</p>
+                </div>
+                <div class="mini-info-card">
+                    <i data-lucide="phone"></i>
+                    <h4>Llámanos</h4>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+            </div>
+
+            <!-- requisito: redes sociales de la imagen del drive con lucide -->
             <div class="social-channels">
-                <h3>Síguenos</h3>
+                <p class="social-footer-text">Sigue nuestro viaje hacia un futuro más verde</p>
                 <div class="social-icons-grid">
-                    <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i data-lucide="camera"></i></a>
+                    <a href="#" class="social-link" aria-label="TikTok"><i data-lucide="music"></i></a>
+                    <a href="#" class="social-link" aria-label="Threads"><i data-lucide="at-sign"></i></a>
                 </div>
             </div>
         </aside>
     </main>
 
+    <!-- cdn oficial de lucide icons requerido para pintar las etiquetas -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // inicializa los iconos de la pagina de forma automatica
+        lucide.createIcons();
+    </script>
 </body>
 </html>
